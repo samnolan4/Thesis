@@ -179,7 +179,7 @@ def train(dataset, epochs):
             results = discriminator.predict(test_images)
             metric = tf.keras.metrics.CategoricalAccuracy()
             metric.update_state(test_labels, results[:, 1:11])
-            print('Classification Accuracy at Epoch {} is {}'.format(epoch + 1, metric.result.numpy()))
+            print('Classification Accuracy at Epoch {} is {}'.format(epoch + 1, metric.result().numpy()))
 
             checkpoint.save(file_prefix=checkpoint_prefix)
 
