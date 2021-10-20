@@ -113,7 +113,7 @@ checkpoint = tf.train.Checkpoint(generator_optimizer=generator_optimizer,
                                  discriminator=discriminator)
 
 EPOCHS = 200
-noise_dim = 100
+noise_dim = 200
 num_examples_to_generate = 16
 
 # This random noise gets reused when generating images so that we can see a progression
