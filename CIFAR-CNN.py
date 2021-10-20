@@ -33,7 +33,7 @@ train_dataset = tf.data.Dataset.from_tensor_slices(train_dataset).shuffle(BUFFER
 # Outputs 11 values: Value 0: Real or Fake, Values 1-11: One hot class probabilities.
 def make_discriminator_model():
     model = tf.keras.Sequential()
-    model.add(layers.Conv2D(64, (5, 5), strides=(2, 2), padding='same',
+    model.add(layers.Conv2D(128, (5, 5), strides=(2, 2), padding='same',
                             input_shape=[32, 32, 3]))
     model.add(layers.LeakyReLU())
     model.add(layers.Dropout(0.3))
